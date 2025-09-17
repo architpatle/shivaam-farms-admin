@@ -22,6 +22,7 @@ import {
   Wine,
   User,
 } from "lucide-react"
+import { IndianRupee } from "lucide-react";
 
 const revenueData = [
   { month: "Jan", revenue: 45000, expenses: 32000, profit: 13000 },
@@ -169,10 +170,11 @@ export default function ShivaamFarmsDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            {/* <DollarSign className="h-4 w-4 text-muted-foreground" /> */}
+            <IndianRupee className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$12,500</div>
+            <div className="text-2xl font-bold">Rs. 1,12,500</div>
             <p className="text-xs text-muted-foreground">
               <TrendingUp className="inline h-3 w-3 mr-1" />
               +8% from last month
@@ -296,7 +298,7 @@ export default function ShivaamFarmsDashboard() {
               <TableRow>
                 <TableHead>Product Name</TableHead>
                 <TableHead>Category</TableHead>
-                <TableHead>Price ($)</TableHead>
+                <TableHead>Price (Rs.)</TableHead>
                 <TableHead>Quantity</TableHead>
               </TableRow>
             </TableHeader>
@@ -305,7 +307,7 @@ export default function ShivaamFarmsDashboard() {
                 <TableRow key={index}>
                   <TableCell className="font-medium">{product.name}</TableCell>
                   <TableCell>{product.category}</TableCell>
-                  <TableCell>${product.price.toFixed(2)}</TableCell>
+                  <TableCell>Rs. {product.price.toFixed(2)}</TableCell>
                   <TableCell>{product.quantity}</TableCell>
                 </TableRow>
               ))}
@@ -356,10 +358,11 @@ export default function ShivaamFarmsDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Monthly Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            {/* <DollarSign className="h-4 w-4 text-muted-foreground" /> */}
+            <IndianRupee className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$18,000</div>
+            <div className="text-2xl font-bold">Rs. 2,18,000</div>
           </CardContent>
         </Card>
       </div>
@@ -376,7 +379,7 @@ export default function ShivaamFarmsDashboard() {
                 <TableHead>Villa Name</TableHead>
                 <TableHead>Type</TableHead>
                 <TableHead>Status</TableHead>
-                <TableHead>Rent/Month ($)</TableHead>
+                <TableHead>Rent/Month (Rs.)</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -387,7 +390,7 @@ export default function ShivaamFarmsDashboard() {
                   <TableCell>
                     <Badge variant={villa.status === "Occupied" ? "default" : "secondary"}>{villa.status}</Badge>
                   </TableCell>
-                  <TableCell>${villa.rent.toLocaleString()}</TableCell>
+                  <TableCell>Rs. {villa.rent.toLocaleString()}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -437,10 +440,11 @@ export default function ShivaamFarmsDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            {/* <DollarSign className="h-4 w-4 text-muted-foreground" /> */}
+            <IndianRupee className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$850</div>
+            <div className="text-2xl font-bold">Rs. 32,850</div>
           </CardContent>
         </Card>
       </div>
@@ -457,7 +461,7 @@ export default function ShivaamFarmsDashboard() {
                 <TableRow>
                   <TableHead>Dish Name</TableHead>
                   <TableHead>Category</TableHead>
-                  <TableHead>Price ($)</TableHead>
+                  <TableHead>Price (Rs.)</TableHead>
                   <TableHead>Available Qty</TableHead>
                 </TableRow>
               </TableHeader>
@@ -466,7 +470,7 @@ export default function ShivaamFarmsDashboard() {
                   <TableRow key={index}>
                     <TableCell className="font-medium">{dish.name}</TableCell>
                     <TableCell>{dish.category}</TableCell>
-                    <TableCell>${dish.price}</TableCell>
+                    <TableCell>Rs. {dish.price}</TableCell>
                     <TableCell>{dish.quantity}</TableCell>
                   </TableRow>
                 ))}
@@ -549,10 +553,12 @@ export default function ShivaamFarmsDashboard() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            {/* <DollarSign className="h-4 w-4 text-muted-foreground" /> */}
+                        <IndianRupee className="h-4 w-4 text-muted-foreground" />
+
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$650</div>
+            <div className="text-2xl font-bold">Rs. 26,650</div>
           </CardContent>
         </Card>
       </div>
@@ -569,7 +575,7 @@ export default function ShivaamFarmsDashboard() {
                 <TableRow>
                   <TableHead>Beverage Name</TableHead>
                   <TableHead>Category</TableHead>
-                  <TableHead>Price ($)</TableHead>
+                  <TableHead>Price (Rs.)</TableHead>
                   <TableHead>Available Qty</TableHead>
                 </TableRow>
               </TableHeader>
@@ -578,7 +584,7 @@ export default function ShivaamFarmsDashboard() {
                   <TableRow key={index}>
                     <TableCell className="font-medium">{beverage.name}</TableCell>
                     <TableCell>{beverage.category}</TableCell>
-                    <TableCell>${beverage.price}</TableCell>
+                    <TableCell>Rs. {beverage.price}</TableCell>
                     <TableCell>{beverage.quantity}</TableCell>
                   </TableRow>
                 ))}
